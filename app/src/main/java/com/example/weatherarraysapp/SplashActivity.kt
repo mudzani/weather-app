@@ -8,7 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.SplashActivity)
+        // Fixed: matching the renamed layout file splash_activity.xml
+        setContentView(R.layout.splash_activity)
 
         val btnStart = findViewById<Button>(R.id.btnStart)
         val btnExit = findViewById<Button>(R.id.btnExit)
@@ -16,6 +17,7 @@ class SplashActivity : AppCompatActivity() {
         btnStart.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         btnExit.setOnClickListener {

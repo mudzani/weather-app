@@ -1,6 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Keeping the background consistent with the welcome screen -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/sunset"
+        android:scaleType="centerCrop" />
+
+    <!-- Dark overlay so the text is easy to read -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:alpha="0.04" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weekly Weather Input"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Monday -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Monday" android:textColor="#3527F5" android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textSize="17sp"/>
+        <EditText android:id="@+id/etMinMon" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Min Temp"
+            android:inputType="numberDecimal" android:textColor="#FFFFFF"
+            android:backgroundTint="#42A5F5"/>
+        <EditText android:id="@+id/etMaxMon" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Max Temp"
+            android:inputType="numberDecimal" android:textColor="#FFFFFF"
+            android:backgroundTint="#42A5F5"/>
+        <EditText android:id="@+id/etCondMon" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Condition (e.g. Sunny)"
+            android:textColor="#FFFFFF" android:backgroundTint="#42A5F5"/>
+
+        <!-- Tuesday -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Tuesday" android:textColor="#3527F5" android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textSize="17sp"/>
+        <EditText android:id="@+id/etMinTue" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Min Temp"
+            android:inputType="numberDecimal" android:textColor="#FFFFFF"
+            android:backgroundTint="#42A5F5"/>
+        <EditText android:id="@+id/etMaxTue" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Max Temp"
+            android:inputType="numberDecimal" android:textColor="#FFFFFF"
+            android:backgroundTint="#42A5F5"/>
+        <EditText android:id="@+id/etCondTue" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Condition (e.g. Sunny)"
+            android:textColor="#FFFFFF" android:backgroundTint="#42A5F5"/>
+
+        <!-- Wednesday -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Wednesday" android:textColor="#3527F5" android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textSize="17sp"/>
+        <EditText android:id="@+id/etMinWed" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Min Temp"
+            android:inputType="numberDecimal" android:textColor="#FFFFFF"
+            android:backgroundTint="#42A5F5"/>
+        <EditText android:id="@+id/etMaxWed" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Max Temp"
+            android:inputType="numberDecimal" android:textColor="#FFFFFF"
+            android:backgroundTint="#42A5F5"/>
+        <EditText android:id="@+id/etCondWed" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Condition (e.g. Cloudy)"
+            android:textColor="#FFFFFF" android:backgroundTint="#42A5F5"/>
+
+        <!-- Thursday -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Thursday" android:textColor="#3527F5" android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textSize="17sp"/>
+        <EditText android:id="@+id/etMinThu" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Min Temp"
+            android:inputType="numberDecimal" android:textColor="#FFFFFF"
+            android:backgroundTint="#42A5F5"/>
+        <EditText android:id="@+id/etMaxThu" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Max Temp"
+            android:inputType="numberDecimal" android:textColor="#FFFFFF"
+            android:backgroundTint="#42A5F5"/>
+        <EditText android:id="@+id/etCondThu" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Condition (e.g. Windy)"
+            android:textColor="#FFFFFF" android:backgroundTint="#42A5F5"/>
+
+        <!-- Friday -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Friday" android:textColor="#3527F5" android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textSize="17sp"/>
+        <EditText android:id="@+id/etMinFri" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Min Temp"
+            android:inputType="numberDecimal" android:textColor="#FFFFFF"
+            android:backgroundTint="#42A5F5"/>
+        <EditText android:id="@+id/etMaxFri" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Max Temp"
+            android:inputType="numberDecimal" android:textColor="#FFFFFF"
+            android:backgroundTint="#42A5F5"/>
+        <EditText android:id="@+id/etCondFri" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Condition (e.g. Sunny)"
+            android:textColor="#FFFFFF" android:backgroundTint="#42A5F5"/>
+
+        <!-- Saturday -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Saturday" android:textColor="#3527F5" android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textSize="17sp"/>
+        <EditText android:id="@+id/etMinSat" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Min Temp"
+            android:inputType="numberDecimal" android:textColor="#FFFFFF"
+            android:backgroundTint="#42A5F5"/>
+        <EditText android:id="@+id/etMaxSat" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Max Temp"
+            android:inputType="numberDecimal" android:textColor="#FFFFFF"
+            android:backgroundTint="#42A5F5"/>
+        <EditText android:id="@+id/etCondSat" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Condition (e.g. Raining)"
+            android:textColor="#FFFFFF" android:backgroundTint="#42A5F5"/>
+
+        <!-- Sunday -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Sunday" android:textColor="#3527F5" android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textSize="17sp"
+            />
+        <EditText android:id="@+id/etMinSun" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Min Temp"
+            android:inputType="numberDecimal" android:textColor="#FFFFFF"
+            android:backgroundTint="#42A5F5"/>
+        <EditText android:id="@+id/etMaxSun" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Max Temp"
+            android:inputType="numberDecimal" android:textColor="#FFFFFF"
+            android:backgroundTint="#42A5F5"/>
+        <EditText android:id="@+id/etCondSun" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Condition (e.g. Cold)"
+            android:textColor="#FFFFFF" android:backgroundTint="#42A5F5"/>
+
+        <!-- result display -->
+        <TextView
+            android:id="@+id/tvAverageResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Average Temperature: --"
+            android:textSize="18sp"
+            android:textColor="#FFD54F"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:background="#1E3A5F" />
+
+        <!-- buttons at the bottom -->
+        <Button android:id="@+id/btnCalculate" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Calculate Average"
+            android:backgroundTint="#42A5F5" android:layout_marginTop="12dp"/>
+
+        <Button android:id="@+id/btnClear" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Clear Data"
+            android:backgroundTint="#FF7043" android:layout_marginTop="8dp"/>
+
+        <Button android:id="@+id/btnViewDetails" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="View Details"
+            android:backgroundTint="#66BB6A" android:layout_marginTop="8dp"/>
+
+        <Button android:id="@+id/btnExitMain" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Exit"
+            android:backgroundTint="#EF5350" android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>
+</ScrollView>
